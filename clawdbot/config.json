@@ -1,0 +1,23 @@
+{
+  "name": "ClawdBot",
+  "version": "0.1.0",
+  "slug": "clawdbot",
+  "description": "Run ClawdBot as a Home Assistant add-on",
+  "arch": ["amd64", "aarch64"],
+  "startup": "services",
+  "boot": "auto",
+  "ports": {
+    "8080/tcp": 8080
+  },
+  "ports_description": {
+    "8080/tcp": "ClawdBot API"
+  },
+  "options": {
+    "ha_token": "",
+    "ha_url": "http://homeassistant.local:8123"
+  },
+  "schema": {
+    "ha_token": "str",
+    "ha_url": "str"
+  }
+}
